@@ -12,7 +12,7 @@ app.config([
       .when("/problem", { templateUrl: "../Page/problem.html" })
       .when("/meditation", { templateUrl: "../Page/meditation.html" })
       .when("/", {
-        templateUrl: "../Pagee/customAerobic.html",
+        templateUrl: "../Page/customAerobic.html",
         controller: "ctrlAerobic",
       })
       .when("/login", {
@@ -20,11 +20,11 @@ app.config([
         controller: "ctrlLogin",
       })
       .when("/displayDataLocal", {
-        templateUrl: "../Pagee/displayDataLocal.html",
+        templateUrl: "../Page/displayDataLocal.html",
         controller: "ctrlLogin",
       })
       .when("/", {
-        templateUrl: "../Pagee/customAerobic.html",
+        templateUrl: "../Page/customAerobic.html",
         controller: "customCtrl",
       });
   },
