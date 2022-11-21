@@ -12,19 +12,19 @@ app.config([
       .when("/problem", { templateUrl: "Page/problem.html" })
       .when("/meditation", { templateUrl: "Page/meditation.html" })
       .when("/", {
-        templateUrl: "Page/customAerobic.html",
+        templateUrl: "../Page/customAerobic.html",
         controller: "ctrlAerobic",
       })
       .when("/login", {
-        templateUrl: "Page/login.html",
+        templateUrl: "../Page/login.html",
         controller: "ctrlLogin",
       })
       .when("/displayDataLocal", {
-        templateUrl: "Page/displayDataLocal.html",
+        templateUrl: "../Page/displayDataLocal.html",
         controller: "ctrlLogin",
       })
       .when("/", {
-        templateUrl: "Page/customAerobic.html",
+        templateUrl: "../Page/customAerobic.html",
         controller: "customCtrl",
       });
   },
@@ -56,7 +56,7 @@ app.controller("HeaderFooter", function ($scope) {
   // =====================================
 });
 app.run(function ($rootScope, $http) {
-  $http.get("JSON/product.json").then(function (rsp) {
+  $http.get("../JSON/product.json").then(function (rsp) {
     $rootScope.products = rsp.data.product;
     $rootScope.listPractice = [];
     $rootScope.saveValue = [];
