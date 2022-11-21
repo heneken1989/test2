@@ -8,9 +8,9 @@ app.config([
   "$routeProvider",
   function ($routeProvider) {
     $routeProvider
-      .when("", { templateUrl: "Page/home.html" })
-      .when("/problem", { templateUrl: "Page/problem.html" })
-      .when("/meditation", { templateUrl: "Page/meditation.html" })
+      .when("", { templateUrl: "./Page/home.html" })
+      .when("/problem", { templateUrl: "../Page/problem.html" })
+      .when("/meditation", { templateUrl: "../Page/meditation.html" })
       .when("/", {
         templateUrl: "../Page/customAerobic.html",
         controller: "ctrlAerobic",
@@ -122,34 +122,34 @@ app.controller("timer-list", function () {
       // alert(array);
       var outputSound = `<source
             id="hiddenoth-1"
-            src="Page/audio/get-ready.mp3"
+            src="./Page/audio/get-ready.mp3"
             type="audio/mpeg"
           />
           <source
             id="hiddenoth-2"
-            src="Page/audio/workout-complete.mp3"
+            src="./Page/audio/workout-complete.mp3"
             type="audio/mpeg"
           />
           <source id="hiddenoth-3" src="./Page/audio/" type="audio/mpeg" />
           <source
             id="hiddenoth-4"
-            src="Page/audio/rest.mp3"
+            src="./Page/audio/rest.mp3"
             type="audio/mpeg"
           />
           <source
             id="hiddenbeep-hidden"
-            src="Page/audio/beep.mp3"
+            src="./Page/audio/beep.mp3"
             type="audio/mpeg"
           />
           <source
             id="three-beep"
-            src="Page/audio/threebeep.mp3"
+            src="./Page/audio/threebeep.mp3"
             type="audio/mpeg"
           />`;
       $.each(array, function (k, v) {
         outputSound += `<source
             id="hiddenex-${k + 1}"
-            src="Page/audio/${v.name}.mp3"
+            src="./Page/audio/${v.name}.mp3"
             type="audio/mpeg"
           />`;
       });
