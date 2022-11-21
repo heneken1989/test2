@@ -31,6 +31,45 @@
   </head>
   
   <body ng-app="myApp">
+    <div ng-controller="HeaderFooter">
+      <!-- <div ng-include="'./Page/header.html'"></div> -->
+      <header class="headerWeb">
+        <div class="logo">
+          <a class="link" href="">
+            <img src="IMG/lotus.png" alt="" />
+            <p class="title">HAPPINESS</p>
+          </a>
+        </div>
+
+        <nav class="nav-bar">
+          <div class="logoAdd">
+            <a class="link" href="">
+              <img src="./IMG/lotus.png" alt="" />
+              <p class="title">HAPPINESS</p>
+            </a>
+          </div>
+          <ul class="nav">
+            <li class="tag">
+              <a href="index.html">home</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/problem.png" alt="" />
+              <a href="Khai/problem.html">problem</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/meditation.png" alt="" />
+              <a href="Hien/Meditation.html">meditation</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/aerobic.png" alt="" />
+              <a href="#/!">aerobic</a>
+            </li>
+            <li class="tag">
+              <a href="Phat/Login/index.html">log in</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div ng-include="'./Page/footer.html'"></div>
     </div>
 
