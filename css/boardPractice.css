@@ -1,0 +1,90 @@
+/* .boardPractice {
+    max-width: 1500px;
+    height: 500px;
+    max-width: 1500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.backGroundPractice {
+    width: 90%;
+    height: 100%;
+    background-color: #DEF1F9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.backGroundPracticeLeft {
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- */
+
+
+
+/* -------------- */
+
+
+
+/* .activePractice {
+    width: 90%;
+    height: 15%;
+    background-color: rgb(126, 91, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.activePractice button {
+    width: 150px;
+    height: 40px;
+    background-color: bisque;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.backGroundPracticeRight {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(143, 143, 151);
+    overflow: auto;
+}
+
+
+
+
+/* --------- */

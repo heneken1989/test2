@@ -1,0 +1,430 @@
+/* html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+} */
+
+div.gif-contain {
+    background: white;
+    border-bottom: 5px solid #0F0F0F;
+}
+
+div.curr-gif {
+    margin: 0 auto;
+    height: 300px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+div.curr-gif2 {
+    margin: 0 auto;
+    height: 300px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+div.exercise-name {
+    text-align: center;
+}
+
+div.timer-creator {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+div.timer-creator h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 15px 0 15px 12.5%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #FCE4EC;
+    text-align: left;
+}
+
+div.timer-creator h2 {
+    font-size: 2em;
+    margin: 10px 0 10px 12.5%;
+    text-align: left;
+}
+
+div.timer-creator input[type="button"] {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    background: #FCE4EC;
+    border: none;
+    margin: 10px;
+    color: #777;
+    border-radius: 7px;
+    box-shadow: 2px 2px 0px #CAB7BD;
+    cursor: pointer;
+    transition: color 0.25s;
+    outline: 0;
+}
+
+div.timer-creator input[type="button"]:hover {
+    color: #333;
+}
+
+div.timer-creator input[type="button"]:active {
+    box-shadow: -2px -2px 0px #CAB7BD;
+    border: none;
+}
+
+div.timer-creator div.hidden {
+    display: none;
+}
+
+div.timer-input-box {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+div.timer-input-box div.box-title {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    background: #F5F5F5;
+    height: 30px;
+    line-height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 15px;
+}
+
+div.timer-input-box div.box-title span.remove {
+    float: right;
+    display: block;
+    width: 30px;
+    border-left: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.5s, color 0.5s;
+    border-top-right-radius: 10px;
+    color: #ccc;
+}
+
+div.timer-input-box div.box-title span.remove:hover {
+    background: #ddd;
+    color: #aaa;
+}
+
+div.timer-input-box div.box-body {
+    padding: 10px;
+}
+
+div.timer-input-box div.box-body div.label {
+    width: 100%;
+    font-size: 1.25em;
+    margin: 0 0 5px 0;
+}
+
+div.timer-input-box div.box-body input {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    margin-right: 10%;
+    padding: 6px 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    transition: box-shadow 0.5s;
+}
+
+div.timer-input-box div.box-body input:focus {
+    box-shadow: 0px 0px 10px #47A4E2;
+}
+
+div.timer-input-box div.box-body div.timer-number {
+    position: relative;
+}
+
+div.timer-input-box div.box-body div.timer-number div.timer-number-increment {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 1.5px;
+    width: 12px;
+    height: 25px;
+    cursor: pointer;
+}
+
+div.timer-input-box div.box-body div.timer-number div.timer-number-increment div.up,
+div.timer-input-box div.box-body div.timer-number div.timer-number-increment div.down {
+    color: #ddd;
+    transition: color 0.5s;
+}
+
+div.timer-input-box div.box-body div.timer-number div.timer-number-increment div.up:hover,
+div.timer-input-box div.box-body div.timer-number div.timer-number-increment div.down:hover {
+    color: #000;
+}
+
+div.interval-timer {
+    width: 100%;
+    color: #0F0F0F;
+    font-family: HelveticaNeue-Light, Arial, Helvetica, Geneva, sans-serif;
+    height: 100%;
+    max-height: 325px;
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    white-space: nowrap;
+    font-size: 0;
+    vertical-align: top;
+    position: relative;
+    cursor: default;
+}
+
+div.interval-timer div {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.timer-countdown,
+.timer-totals,
+.timer-menu {
+    background: #F5F5F5;
+}
+
+div.interval-timer div.timer-countdown {
+    font-size: 225px;
+    /* display: block; */
+    width: 100%;
+    line-height: 200px;
+    vertical-align: top;
+}
+
+div.interval-timer div.timer-totals {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+div.interval-timer div.timer-totals>div {
+    width: 32%;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 50px;
+}
+
+div.interval-timer div.timer-totals>div:first-child {
+    /* float: left; */
+    text-align: left;
+    padding-left: 10px;
+}
+
+div.interval-timer div.timer-totals>div:last-child {
+    /* float: right; */
+    text-align: right;
+    padding-right: 10px;
+}
+
+div.interval-timer div.timer-totals>div div.timer-total-label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.interval-timer div.timer-totals>div div.timer-total-value {
+    font-size: 28px;
+}
+
+div.interval-timer div.timer-menu {
+    /* display: block; */
+    width: 100%;
+    height: 50px;
+    vertical-align: text-top;
+}
+
+div.interval-timer div.timer-menu div {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    vertical-align: text-top;
+}
+
+div.interval-timer div.timer-menu div.timer-restart {
+    display: inline-block;
+    width: 8.333%;
+    height: 50px;
+    font-size: 35px;
+    font-weight: bold;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    cursor: pointer;
+}
+
+div.interval-timer div.timer-menu div.timer-list {
+    display: inline-block;
+    width: 83.333%;
+    height: 50px;
+    border-top: 1px solid white;
+    overflow: hidden;
+    font-size: 0px;
+    white-space: nowrap;
+}
+
+div.interval-timer div.timer-menu div.timer-list div.timer-list-item {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    width: 50%;
+    font-size: 14px;
+    line-height: 50px;
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: bold;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+
+div.interval-timer div.timer-menu div.timer-next {
+    display: inline-block;
+    width: 8.333%;
+    height: 50px;
+    font-size: 25px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    div.interval-timer div.timer-countdown {
+        font-size: 150px !important;
+    }
+
+    div.interval-timer div.timer-countdown {
+        line-height: 150px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    div.interval-timer div.timer-countdown {
+        font-size: 120px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    div.curr-gif {
+        height: 240px;
+        width: 320px;
+    }
+
+    div.curr-gif2 {
+        height: 240px;
+        width: 320px;
+    }
+
+    div.interval-timer div.timer-countdown {
+        font-size: 100px !important;
+    }
+
+    div.interval-timer div.timer-menu div.timer-list {
+        width: 75%;
+    }
+
+    div.interval-timer div.timer-menu div.timer-restart,
+    div.interval-timer div.timer-menu div.timer-next {
+        width: 12.5%;
+    }
+
+    div.interval-timer div.timer-totals>div div.timer-total-label {
+        font-size: 12px;
+    }
+
+    div.interval-timer div.timer-totals>div div.timer-total-value {
+        font-size: 22px;
+    }
+
+    div.interval-timer div.timer-menu div.timer-list div.timer-list-item {
+        font-size: 9px;
+    }
+
+    div.interval-timer div.timer-menu div.timer-next {
+        font-size: 15px;
+    }
+
+    div.interval-timer div.timer-menu div.timer-restart {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    div.interval-timer div.timer-countdown {
+        font-size: 50px !important;
+    }
+
+    div.interval-timer div.timer-totals>div div.timer-total-label {
+        font-size: 8px;
+    }
+
+    div.interval-timer div.timer-totals>div div.timer-total-value {
+        font-size: 18px;
+    }
+
+    div.interval-timer div.timer-menu div.timer-list div.timer-list-item {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.curr-gif {
+        height: 200px;
+        width: 250px;
+    }
+
+    div.curr-gif2 {
+        height: 200px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    div.curr-gif {
+        height: 120px;
+        width: 150px;
+    }
+
+    div.curr-gif2 {
+        height: 120px;
+        width: 150px;
+    }
+}

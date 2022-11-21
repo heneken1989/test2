@@ -1,0 +1,757 @@
+.PagePractice {
+    background-color: #def9fc;
+
+    height: 100vh;
+    margin: auto;
+
+}
+
+.PagePractice .tabs {
+    position: relative;
+    color: #666666;
+    min-height: 50px;
+    width: 90%;
+    /* clear: both; */
+    font-family: futura;
+    font-size: 17px;
+    /* margin: 100px; */
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+
+
+
+}
+
+.PagePractice .tab {
+    float: left;
+    margin: 0 15px;
+    margin-top: 50px;
+
+
+}
+
+.PagePractice .tab label {
+    background: #f8f1fb;
+    /* LABEL */
+    padding: 10px;
+    color: #d0bdd9;
+    border: 1px solid #f8f1fb;
+    border-radius: 15px;
+    margin-left: -1px;
+    position: relative;
+    font-weight: bold;
+    /* left: 1px; */
+
+}
+
+
+
+.PagePractice .labelTotal {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -20px;
+    position: absolute;
+    top: 250px;
+    z-index: 2;
+    left: -480px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: none;
+    height: 55px;
+}
+
+.PagePractice .imgListChoose {
+    width: 30px;
+    height: 30px;
+
+}
+
+.PagePractice .showTotalChoose {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #664AFF;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    left: 25px;
+    color: #fff;
+
+}
+
+.PagePractice .tab [type="radio"] {
+    display: none;
+}
+
+/* ======== */
+
+
+/* ========= */
+.PagePractice .content {
+    position: absolute;
+    min-height: fit-content;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0px;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    background: #ffffff;
+    margin: auto
+}
+
+.PagePractice [type="radio"]:checked~label {
+    background: #e7d0f1;
+    border-bottom: 1px solid #e8d3f2;
+    z-index: 2;
+}
+
+.PagePractice [type="radio"]:checked~label~.content {
+    z-index: 1;
+}
+
+.PagePractice h1 {
+    font-family: "Buffalo Script";
+    font-size: 16px
+}
+
+.listCardPractice {
+    display: block;
+    position: absolute;
+    left: -420px;
+    top: 150px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 30px;
+    z-index: 2;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.listCardPractice img {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* ======================================= */
+.dragGrid {
+    font-family: system-ui;
+    z-index: 1;
+    position: relative;
+
+}
+
+.dragGrid .visuallyhidden {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    opacity: 0;
+
+}
+
+/* .dragGrid h1 {
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+} */
+
+.dragGrid .containerGrid {
+    overflow: hidden;
+    padding: 40px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+
+    /* background: rgba(0, 0, 0, .1) */
+}
+
+.dragGrid .card-carousel {
+    --card-width: 10%;
+    --card-max-width: 280px;
+    --card-height: 350px;
+    --carousel-min-width: 600px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: var(--card-height);
+    min-width: var(--carousel-min-width);
+    transition: filter .3s ease;
+    margin-left: 57px;
+}
+
+@media screen and (max-width: 640px) {
+    .dragGrid .card-carousel {
+        margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+    }
+}
+
+.dragGrid .card-carousel.smooth-return {
+
+    transition: all .2s ease;
+}
+
+.dragGrid .card-carousel .card {
+    background: whitesmoke;
+    width: var(--card-width);
+    max-width: var(--card-max-width);
+    text-align: center;
+    /* padding: 1em; */
+    min-width: 250px;
+    height: var(--card-height);
+    position: absolute;
+    margin: 0 auto;
+    color: rgba(0, 0, 0, .5);
+    transition: inherit;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    filter: brightness(.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dragGrid .card.highlight {
+    filter: brightness(1)
+}
+
+
+
+
+
+.dragGrid .image-container {
+    width: 8em;
+    height: 8em;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 2em;
+    border-radius: 100%;
+    padding: 1em;
+    -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+.searchPracticeCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-box {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    top: 10px;
+    left: 45px;
+    /* margin-left: 100px; */
+    /* z-index: 11; */
+
+
+}
+
+.search-box.active {
+    width: 300px;
+
+}
+
+
+.search-box .inputSearch {
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    outline: none;
+    padding: 0 60px 0 60px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.search-box .inputSearch.active {
+    opacity: 1;
+
+}
+
+.search-box input::placeholder {
+    color: #a6a6a6;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 22px;
+    color: #664AFF;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .search-icon.active {
+    left: 6px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    font-size: 20px;
+    background: #664AFF;
+    color: #fff;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-icon.active {
+    right: 10px;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+
+/* ======================== */
+.filterPracticeCard {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 100px;
+    top: -40px;
+
+
+}
+
+.filterPracticeCard .filterAll {
+    width: 110px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    color: black;
+    border: solid;
+
+
+}
+
+.filterPracticeCard .filterAll:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #def9fc;
+}
+
+.filterCardPractice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    margin-top: -75px;
+
+}
+
+.listCardFilter {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.getDataItemFilter {
+    width: 110px;
+    padding: 10px 0;
+    height: 40px;
+    text-align: center;
+    border-radius: 15px;
+
+
+
+
+
+}
+
+.textDisplayValue {
+    width: 110px;
+    color: black;
+
+}
+
+.getDataItemFilter:hover {
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #def9fc;
+
+}
+
+
+
+/* ==================== */
+
+
+.showChoosePractice {
+    padding: 10px 0;
+
+    width: 50%;
+    min-height: 350px;
+    background-color: rgb(255, 255, 255);
+
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+    overflow-y: scroll;
+    /* align-items: center; */
+
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+
+}
+
+
+.showChoosePractice::-webkit-scrollbar {
+    display: none;
+}
+
+.sortable-card {
+    padding: 10px 0;
+    width: 100%;
+    height: 10px;
+    margin: 10px 0;
+    width: fit-content;
+
+}
+
+.sortable-card li {
+    /* height: 70px; */
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    background: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- */
+.move {
+    width: 20%;
+    height: 100%;
+    /* background-color: rgb(65, 28, 28); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+
+}
+
+.move div {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 50px;
+
+}
+
+.img {
+    width: 25%;
+    height: 100%;
+    /* background-color: rgb(242, 215, 215); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.nameAndAmount {
+    width: 45%;
+    height: 100%;
+    /* background-color: rgb(205, 198, 198); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nameTop {
+    width: 100%;
+    height: 40%;
+    /* background-color: rgb(25, 49, 70); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2px;
+}
+
+.amountBottom {
+    width: 100%;
+    height: 75%;
+    /* background-color: rgb(117, 144, 168); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.amountBottom .input {
+
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.amountBottom .input input[type="number"] {
+    width: 50px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+.delete {
+    width: 20%;
+    height: 100%;
+    /* background-color: rgb(88, 82, 82); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete img {
+
+    width: 35px;
+    height: 35px;
+
+}
+
+
+
+/* -------------- */
+
+
+
+/* .activePractice {
+    width: 90%;
+    height: 15%;
+    background-color: rgb(126, 91, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+/* .activePractice button {
+    width: 150px;
+    height: 40px;
+    background-color: bisque;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+} */
+
+.backGroundPracticeRight {
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+
+    display: none;
+}
+
+
+
+
+.outSide {
+
+    height: 70px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* ======================== */
+.buttonTimeList {
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.btnListShowStar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    outline: none;
+    z-index: 2;
+
+}
+
+.btnListShowStar .btn_List_Show {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    outline: none;
+    background-color: #d0bdd9;
+    ;
+}
+
+.btnListChoose {
+    position: relative;
+    top: 100px;
+
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    outline: none;
+    /* background: #f8f1fb; */
+
+    z-index: 2;
+
+
+
+}
+
+.btnListChoose .btn_Show_List_Choose {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    outline: none;
+    background-color: #d0bdd9;
+
+
+}
+
+
+.btnListShowStar img {
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.btnListChoose img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+.show_Total_Choose {
+
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #664AFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: block; */
+    color: #fff;
+
+
+}

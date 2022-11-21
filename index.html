@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./CSS/bigBg.css" /> -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/boardPractice.css" />
+    <link rel="stylesheet" href="./CSS/login2.css" />
+    <link rel="stylesheet" href="./CSS/style222.css" />
+    <link rel="stylesheet" href="./css/clock.css" />
+    <link rel="stylesheet" href="./css/customStyle.css" />
+    <link rel="stylesheet" href="./css/cardPratice.css" />
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="HeaderFooter">
+      <!-- <div ng-include="'./Page/header.html'"></div> -->
+      <header class="headerWeb">
+        <div class="logo">
+          <a class="link" href="">
+            <img src="./IMG/lotus.png" alt="" />
+            <p class="title">HAPPINESS</p>
+          </a>
+        </div>
+
+        <nav class="nav-bar">
+          <div class="logoAdd">
+            <a class="link" href="">
+              <img src="./IMG/lotus.png" alt="" />
+              <p class="title">HAPPINESS</p>
+            </a>
+          </div>
+          <ul class="nav">
+            <li class="tag">
+              <a href="">home</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/problem.png" alt="" />
+              <a href="#!problem">problem</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/meditation.png" alt="" />
+              <a href="#!meditation">meditation</a>
+            </li>
+            <li class="tag">
+              <img src="./IMG/aerobic.png" alt="" />
+              <a href="#/!">aerobic</a>
+            </li>
+            <li class="tag">
+              <a href="#!login">log in</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="headerMobile">
+        <header class="cd-header">
+          <div class="header-wrapper">
+            <div class="nav-but-wrap">
+              <div class="menu-icon hover-target">
+                <span class="menu-icon__line menu-icon__line-left"></span>
+                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line menu-icon__line-right"></span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="navAnimation">
+          <div class="nav__content">
+            <ul class="nav__list">
+              <li class="nav__list-item active-nav">
+                <a href="#/!" class="hover-target">home</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#!problem" class="hover-target">problem</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#!meditation" class="hover-target">meditation</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#!aerobic" class="hover-target">aerobic</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#!login" class="hover-target">log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cursor" id="cursor"></div>
+        <div class="cursor2" id="cursor2"></div>
+        <div class="cursor3" id="cursor3"></div>
+      </div>
+
+      <section ng-view></section>
+      <div class="checkPlayerMusic">
+        <div class="playerMusic">
+          <div class="wrapper">
+            <div class="top-bar"></div>
+
+            <div class="img-area">
+              <img src="" alt="" />
+            </div>
+            <div class="song-details">
+              <p class="name"></p>
+              <p class="artist"></p>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+              </div>
+              <div class="song-timer">
+                <span class="current-time">0:00</span>
+                <span class="max-duration">0:00</span>
+              </div>
+            </div>
+
+            <div class="controls">
+              <i
+                id="repeat-plist"
+                class="material-icons"
+                title="Playlist looped"
+                >repeat</i
+              >
+              <i id="prev" class="material-icons">skip_previous</i>
+              <div class="play-pause">
+                <i class="material-icons play">play_arrow</i>
+              </div>
+
+              <i id="next" class="material-icons">skip_next</i>
+
+              <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+
+            <div class="music-list show">
+              <!-- <div class="header"> -->
+              <div class="row"></div>
+              <i id="close" class="material-icons"></i>
+
+              <!-- </div> -->
+              <ul>
+                <!-- here li list are coming from js -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-include="'./Page/footer.html'"></div>
+    </div>
+
+    <script src="path/to/angular.js"></script>
+<script src="path/to/angular-route.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- ---------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/1.4.0/angular-drag-and-drop-lists.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <script src="./JS/app.js"></script>
+  </body>
+</html>

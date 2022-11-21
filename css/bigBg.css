@@ -1,0 +1,502 @@
+.boardAerobic {
+
+    max-width: 1500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.backgroundAerobic {
+    width: 90%;
+    height: 100%;
+    background-color: #DEF1F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    grid-gap: 10px;
+
+
+}
+
+.backgroundAerobicTop {
+    position: relative;
+    left: -220px;
+    width: 700px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+
+
+
+
+}
+
+
+
+.backgroundAerobicBottom {
+    width: 99%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.backgroundSearchTop {
+    width: fit-content;
+    height: 100%;
+    padding: 0 10px;
+    display: grid;
+    place-content: center;
+    margin-left: -10px;
+
+}
+
+
+.filter {
+    width: 100%;
+    height: auto;
+    /* overflow-x: auto; */
+    border-radius: 20px;
+
+}
+
+.filterAerobic {
+    position: relative;
+    left: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.totalItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.itemFilter {
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #775858;
+    border-radius: 15px;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+.textFilter {
+    margin: 0 4px;
+
+}
+
+.backgroundLeft {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #a6a6a6;
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.backgroundGridLeft {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.backgroundNotificationChooseTopLeft {
+
+    width: 100%;
+    height: 20%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberChoose {
+    position: relative;
+    right: -14px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background-color: #664AFF;
+}
+
+.backgroundNotificationChooseTopLeft img {
+    /* position: relative;
+    top: -10px; */
+    width: 30px;
+    height: 30px;
+}
+
+.backgroundControlCenterLeft {
+    width: 100%;
+    height: 80%;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.controlGridLeft {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.controlGridLeft img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+.controlGridRight {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.controlGridRight img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+
+
+.backgroundGridRight {
+    width: 90%;
+    height: 100%;
+    background-color: blueviolet;
+
+}
+
+
+
+.controllerLeftImage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: -2px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controllerRightImage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: -2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controllerRightImage img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.controllerLeftImage img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+.backgroundRight {
+    position: relative;
+    top: -32px;
+    width: 35%;
+    height: 117%;
+    background-color: #775858;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    /* overflow: hidden; */
+    /* justify-content: space-between; */
+
+
+}
+
+.backgroundImageTop {
+    position: relative;
+
+
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.imgPreview,
+.controlImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+
+} */
+
+/* .overlay {
+    z-index: 9;
+    margin: 0px;
+} */
+
+.imgPreview {
+    width: 100%;
+    height: 100%;
+}
+
+.imgPreview img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+.controlImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+
+
+.backgroundTextBottom {
+    width: 100%;
+    height: 100%;
+    background-color: #a6a6a6;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    /* padding: 0px 2px; */
+}
+
+.textTitleGuide {
+    width: 100%;
+    height: 15%;
+    background-color: #262d31;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.textReadGuide {
+    width: 100%;
+    height: 85%;
+    background-color: azure;
+    overflow-wrap: break-word;
+    /* border-radius: 0px 0px 20px 20px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.textTitle {
+    width: 70%;
+    height: 100%;
+    background-color: #664AFF;
+}
+
+.choosePlusAdd {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heartImage {
+    width: 50%;
+    height: 100%;
+    background-color: #e8e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.heartImage img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.addImage {
+    width: 50%;
+    height: 100%;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addImage img {
+    width: 20px;
+    height: 20px;
+
+}
+
+.textRead {
+    width: 100%;
+    height: 80%;
+
+    background-color: #a6a6a6;
+
+}
+
+.textRead ol li {
+    margin-left: 30px;
+}
+
+
+.textBenefit {
+    /* position: relative;
+    top: 80px; */
+    width: 100%;
+    height: 20%;
+    background-color: chocolate;
+}
+
+.backgroundGridRight {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+
+    justify-content: center;
+
+
+
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    margin: 10px 85px;
+    grid-gap: 10px;
+
+
+}
+
+
+
+
+
+.backgroundGridImgCenter {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    height: 180px;
+
+}
+
+.imgGrid {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.imgGrid img {
+
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.backgroundImageTop {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---search--- */
+
+
+
+/* ---------------------- */

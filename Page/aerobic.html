@@ -1,0 +1,181 @@
+<div class="boardAerobic" ng-controller="ctrlAerobic">
+  <div ng-controller="product" class="backgroundAerobic">
+    <div class="backgroundAerobicTop">
+      <div class="backgroundSearchTop"></div>
+      <div class="filter">
+        <div class="filterAerobic">
+          <div class="itemFilter" ng-click="setFilterAll(products)">all</div>
+          <div ng-repeat="value in category" class="totalItem">
+            <div class="itemFilter">
+              <div ng-click="setFilterCategory(value)">{{value}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="backgroundAerobicBottom">
+      <div class="backgroundLeft">
+        <div class="backgroundGridLeft">
+          <div class="backgroundNotificationChooseTopLeft">
+            <div class="numberChoose" ng-model="totalChoose">
+              <small>{{totalChoose}}</small>
+            </div>
+            <img src="../IMG/addfull.png" alt="" />
+          </div>
+          <div class="backgroundControlCenterLeft">
+            <div class="controlGridLeft"></div>
+            <div class="controlGridRight"></div>
+          </div>
+        </div>
+        <div class="backgroundGridRight">
+          <div class="parent">
+            <div
+              class="row"
+              ng-repeat="imgP in products |filter: filterByCategory |filter: search"
+            >
+              <div class="backgroundGridImgCenter" ng-click="preview(imgP)">
+                <div class="imgGrid">
+                  <img ng-src="{{imgP.img}}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="backgroundRight">
+        <div class="backgroundImageTop">
+          <div class="imgPreview">
+            <img
+              class="imgShift"
+              ng-src="{{products[itemCheck].thumb}}"
+              alt=""
+            />
+          </div>
+          <div class="controlImage">
+            <div class="controllerLeftImage"></div>
+            <div class="controllerRightImage"></div>
+          </div>
+        </div>
+        <div class="backgroundTextBottom">
+          <div class="textTitleGuide">
+            <div class="textTitle">
+              <p>Name: {{products[itemCheck].name}}</p>
+            </div>
+            <div class="choosePlusAdd">
+              <div class="heartImage">
+                <img src="../IMG/heartnofull.png" alt="" />
+              </div>
+              <div class="addImage" ng-click="addPractice(products[itemCheck])">
+                <img src="../IMG/addempty.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="textReadGuide">
+            <div class="textRead">
+              <ol>
+                <p ng-bind-html="products[itemCheck].text"></p>
+              </ol>
+            </div>
+            <div class="textBenefit">{{checkBoolean}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-controller="product" class="boardPractice">
+  <div class="backGroundPractice">
+    <div class="backGroundPracticeLeft">
+      <div class="showChoosePratice">
+        <div class="simpleDemo">
+          <ul dnd-list="listPractice">
+            <li
+              ng-repeat="item in listPractice"
+              dnd-draggable="item"
+              dnd-moved="listPractice.splice($index, 1)"
+              dnd-effect-allowed="move"
+            >
+              <div class="outSide">
+                <div class="move">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="img">
+                  <img ng-src="{{item.img}}" alt="" />
+                </div>
+                <div class="nameAndAmount">
+                  <div class="nameTop">{{item.name}}</div>
+                  <div class="amountBottom">
+                    <div class="input">
+                      <span>sets:</span>
+                      <input type="number" ng-model="item.sets" />
+                    </div>
+
+                    <div class="input">
+                      <span>reps:</span>
+                      <input type="number" ng-model="item.reps" />
+                    </div>
+                  </div>
+                </div>
+                <div class="delete">
+                  <img ng-click="del(item)" src="../IMG/close.png" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="" class="buttonTimeList" ng-click="pushArray()">
+        Let's Practice
+      </button>
+    </div>
+
+    <div ng-controller="timer-list" class="backGroundPracticeRight">
+      <div class="interval-timer">
+        <div class="gif-contain">
+          <div
+            class="curr-gif"
+            style="
+              background: url(./Page/IMGS/get-ready.jpg);
+              background-size: cover;
+            "
+          ></div>
+        </div>
+        <input type="hidden" class="initImg" value="get-ready.jpg" />
+
+        <audio id="audio-sounds" preload="auto"></audio>
+
+        <input type="hidden" class="active" value="0" />
+        <div class="timer-countdown" style="font-size: 200px">
+          00:10 <input type="hidden" class="elapsed" value="0" />
+        </div>
+        <div class="timer-totals">
+          <div class="timer-elapsed">
+            <input type="hidden" class="elapsed" value="0" />
+            <div class="timer-total-label">Elapsed</div>
+            <div class="timer-total-value">00:00</div>
+          </div>
+          <div class="timer-intervals">
+            <div class="timer-total-label">Intervals</div>
+            <div class="timer-total-value">1&nbsp;/&nbsp;17</div>
+          </div>
+          <div class="timer-remaining">
+            <input type="hidden" class="elapsed" value="605" />
+            <div class="timer-total-label">Remaining</div>
+            <div class="timer-total-value">10:05</div>
+          </div>
+        </div>
+        <div class="timer-menu">
+          <div class="timer-restart">↻</div>
+
+          <div class="timer-list"></div>
+
+          <div class="timer-next">►</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

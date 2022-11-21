@@ -1,0 +1,135 @@
+<div class="btnListShowStar">
+  <button class="btn_List_Show">
+    <img src="../IMG/jump.png" alt="" />
+  </button>
+</div>
+<!-- ------------------------------------ -->
+<div class="btnListChoose">
+  <button class="btn_Show_List_Choose">
+    <img src="../IMG/list-text.png" alt="" />
+    <div class="show_Total_Choose">0</div>
+  </button>
+</div>
+
+<!-- ============================================================ -->
+
+<div class="PagePractice">
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" id="tab-1" name="tab-group-1" checked />
+      <label class="listCardPractice" for="tab-1"
+        ><img src="../IMG/jump.png" alt="" />
+      </label>
+
+      <div class="content">
+        <div class="dragGrid">
+          <div class="containerGrid">
+            <div class="filterPracticeCard">
+              <div class="filterAll"><p>ALL</p></div>
+              <div class="filterCardPractice">
+                <div ng-repeat="value in category" class="listCardFilter">
+                  <div class="getDataItemFilter">
+                    <div
+                      class="textDisplayValue"
+                      ng-click="setFilterCategory(value)"
+                    >
+                      <p>{{ value }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="searchPracticeCard" ng-controller="printItem">
+              <div class="search-box">
+                <input
+                  type="text"
+                  placeholder="Type to search.."
+                  ng-model="search"
+                  class="inputSearch"
+                />
+                <div class="search-icon" ng-click="onSearch(search)">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="cancel-icon" ng-click="offSearch()">
+                  <i class="fas fa-times"></i>
+                </div>
+                <div class="search-data"></div>
+              </div>
+              <div class="card-carousel"></div>
+            </div>
+            <a href="#" class="visuallyhidden card-controller"
+              >Carousel controller</a
+            >
+          </div>
+        </div>
+
+        <!-- 
+<h2>Check out <a target="_blank" href="https://codepen.io/WillyW/pen/RwRrvjv">Circle Carousel</a></h2> -->
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab-2" name="tab-group-1" />
+      <label for="tab-2" class="labelTotal">
+        <img src="../IMG/list-text.png" alt="" class="imgListChoose" />
+        <div class="showTotalChoose">0</div>
+      </label>
+
+      <div class="content">
+        <div class="showChoosePractice"><ul class="sortable-card"></ul></div>
+        <button class="buttonTimeList">Let's Practice</button>
+      </div>
+    </div>
+
+    <div class="tab">
+      <input type="radio" id="tab-3" name="tab-group-1" />
+
+      <div class="content">
+        <div ng-controller="timer-list" class="backGroundPracticeRight">
+          <div class="interval-timer">
+            <div class="gif-contain">
+              <div
+                class="curr-gif"
+                style="
+                  background: url(./Page/IMGS/get-ready.jpg);
+                  background-size: cover;
+                "
+              ></div>
+            </div>
+            <input type="hidden" class="initImg" value="get-ready.jpg" />
+
+            <audio id="audio-sounds" preload="auto"></audio>
+
+            <input type="hidden" class="active" value="0" />
+            <div class="timer-countdown" style="font-size: 200px">
+              00:10 <input type="hidden" class="elapsed" value="0" />
+            </div>
+            <div class="timer-totals">
+              <div class="timer-elapsed">
+                <input type="hidden" class="elapsed" value="0" />
+                <div class="timer-total-label">Elapsed</div>
+                <div class="timer-total-value">00:00</div>
+              </div>
+              <div class="timer-intervals">
+                <div class="timer-total-label">Intervals</div>
+                <div class="timer-total-value">1&nbsp;/&nbsp;17</div>
+              </div>
+              <div class="timer-remaining">
+                <input type="hidden" class="elapsed" value="605" />
+                <div class="timer-total-label">Remaining</div>
+                <div class="timer-total-value">10:05</div>
+              </div>
+            </div>
+            <div class="timer-menu">
+              <div class="timer-restart">↻</div>
+
+              <div class="timer-list"></div>
+
+              <div class="timer-next">►</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
