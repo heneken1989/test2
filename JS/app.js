@@ -1,6 +1,5 @@
 var app = angular.module("myApp", [
-  "ngRoute",
-  "ngSanitize",
+  "ngRoute","dndLists",
   "ngMessages"
 ]);
 app.config([
